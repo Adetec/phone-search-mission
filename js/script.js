@@ -8,7 +8,7 @@ var picPhone = document.getElementById('pic-phone');
 var liCompany = document.getElementById("company-li");
 var liModel = document.getElementById("model-li");
 var liPrice = document.getElementById("price-li");
-var liAvailable = document.getElementById("avaible-li");
+var liAvailable = document.getElementById("available-li");
 var liColor = document.getElementById('color-li');
 
 
@@ -82,7 +82,7 @@ function searchPhone() {
             liPrice.innerHTML="<b>Price</b>: $"+telephone.price;
             liAvailable.innerHTML="<b>available</b>: "+inventory;
             liColor.innerHTML="<b>Color</b>: "+telephone.color;
-        } else if (srchInput.value.toUpperCase()!=telephone.company) {
+        } else {
             document.getElementById('sorry').innerHTML="Sorry, this product is not available!";
             
         }
