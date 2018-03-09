@@ -2,6 +2,7 @@ var srchInput = document.getElementById('input');
 var srchBtn = document.getElementById('srch-btn');
 var tmp = document.getElementById('tmp');
 
+var title = document.getElementById('title');
 var result = document.getElementById('result');
 var price = document.getElementById('price');
 var picPhone = document.getElementById('pic-phone');
@@ -12,7 +13,8 @@ var liAvailable = document.getElementById("available-li");
 var liColor = document.getElementById('color-li');
 var png = ".png";
 var sorry=  document.getElementById('sorry');
-var title = document.getElementById('title');
+var isFound =false;
+
 
 
 
@@ -69,6 +71,8 @@ function companies(){
 
 
 function searchPhone() {
+    result.style.display="none";
+    sorry.innerHTML="Sorry, there is no such product!";
     phones.forEach(function(telephone){
         
         if (srchInput.value.toUpperCase()===telephone.company){
@@ -86,17 +90,23 @@ function searchPhone() {
             liPrice.innerHTML="<b>Price</b>: $"+telephone.price;
             liAvailable.innerHTML="<b>available</b>: "+inventory;
             liColor.innerHTML="<b>Color</b>: "+telephone.color;
-        } else {
-           sorry.innerHTML="Sorry, this product is not available!";
+            sorry.innerHTML="";
+            isFound = true;
+            
             
         }
+          
+        
+            
         
     });
+    
 }
 
 
 input.addEventListener("keyup", function (){
     searchPhone();
+    
     
 });
 
