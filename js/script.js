@@ -31,14 +31,14 @@ var phones = [
         price: 759.99,
         stock: false,
         color: ['Black','White','grey'],
-        newProduct:  false
+        newProduct:  true
         },
     {   company:'NOKIA',
         model: 'Asha 311',
         price: 225.95,
         stock: false,
         color: ['Black','White','red'],
-        newProduct:  true
+        newProduct:  false
         },
     {   company:'LG',
         model: 'K4',
