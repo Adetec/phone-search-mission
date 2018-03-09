@@ -1,6 +1,18 @@
 var srchInput = document.getElementById('input');
 var srchBtn = document.getElementById('srch-btn');
 var tmp = document.getElementById('tmp');
+
+var result = document.getElementById('result');
+var price = document.getElementById('price');
+var picPhone = document.getElementById('pic-phone');
+var liCompany = document.getElementById("company-li");
+var liModel = document.getElementById("model-li");
+var liPrice = document.getElementById("price-li");
+var liAvailable = document.getElementById("avaible-li");
+var liColor = document.getElementById('color-li');
+
+
+
 var phones = [
         {company:'SAMSUNG',
         model: 'Galaxy S6 edge',
@@ -57,18 +69,19 @@ function searchPhone() {
     phones.forEach(function(telephone){
         
         if (srchInput.value.toUpperCase()===telephone.company){
-            document.getElementById('result').style.display='flex';
-            
-            document.getElementById('pic-phone').setAttribute('src','images/'+telephone.company+'.png');
-            document.getElementById("company-li").innerHTML="<b>Company</b>: "+telephone.company;
-            document.getElementById("model-li").innerHTML="<b>Model</b>: "+telephone.model;
-            document.getElementById("price-li").innerHTML="<b>Price</b>: $"+telephone.price;
             var inventory = telephone.stock? "In stock" : "Out of stock";
-            document.getElementById("avaible-li").innerHTML="<b>available</b>: "+inventory;
             var newPhone = telephone.newProduct? "new" : "sold";
-            document.getElementById('price').setAttribute('src','images/'+newPhone+'.png');
-            console.log(inventory);
-            document.getElementById('color-li').innerHTML="<b>Color</b>: "+telephone.color;
+
+            result.style.display='flex';
+
+            price.setAttribute('src','images/'+newPhone+'.png');
+            picPhone.setAttribute('src','images/'+telephone.company+'.png');
+
+            liCompany.innerHTML="<b>Company</b>: "+telephone.company;
+            liModel.innerHTML="<b>Model</b>: "+telephone.model;
+            liPrice.innerHTML="<b>Price</b>: $"+telephone.price;
+            liAvailable.innerHTML="<b>available</b>: "+inventory;
+            liColor.innerHTML="<b>Color</b>: "+telephone.color;
         } else if (srchInput.value.toUpperCase()!=telephone.company) {
             document.getElementById('sorry').innerHTML="Sorry, this product is not available!";
             
