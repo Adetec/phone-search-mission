@@ -83,7 +83,7 @@ function searchPhone() {
             result.style.display='flex';
 
             price.setAttribute('src','images/'+newPhone+png);
-            picPhone.setAttribute('src','images/'+telephone.company+png);
+            picPhone.setAttribute('src','images/'+telephone.company.toLowerCase()+png);
 
             liCompany.innerHTML="<b>Company</b>: "+telephone.company;
             liModel.innerHTML="<b>Model</b>: "+telephone.model;
