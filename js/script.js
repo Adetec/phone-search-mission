@@ -41,28 +41,7 @@ var phones = [
 companies();
 
 function companies(){
-    // for (var i = 0; i < phones.length; i++) {
-    //     var element = phones[i];
-        // console.log(element);
-        // for (var key in phones) {
-            
-        //         var company = phones[key].company;
-        //         var model = phones[key].model;
-        //         var price = phones[key].price;
-        //         var stock = phones[key].stock;
-        //         var color = phones[key].color.join();
-        //         var newProduct = phones[key].newProduct;
-        //         var avaible = phones[key].avaible;
-        //         var details =[company,price,stock,color,newProduct,avaible];
-        //         console.log(details[0]);
-                
-        //         for(var p = 0; p< details.length; p++){
-                    
-        //         }
-            
-        // }
-        
-    //}
+    
     var lst =[];
     phones.forEach(function(tel) {
         lst.push(tel.company.toLowerCase())
