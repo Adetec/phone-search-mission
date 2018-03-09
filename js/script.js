@@ -10,6 +10,9 @@ var liModel = document.getElementById("model-li");
 var liPrice = document.getElementById("price-li");
 var liAvailable = document.getElementById("available-li");
 var liColor = document.getElementById('color-li');
+var png = ".png";
+var sorry=  document.getElementById('sorry');
+var title = document.getElementById('title');
 
 
 
@@ -72,10 +75,11 @@ function searchPhone() {
             var inventory = telephone.stock? "In stock" : "Out of stock";
             var newPhone = telephone.newProduct? "new" : "sold";
 
+            title.innerHTML='Adetech | '+telephone.company;
             result.style.display='flex';
 
-            price.setAttribute('src','images/'+newPhone+'.png');
-            picPhone.setAttribute('src','images/'+telephone.company+'.png');
+            price.setAttribute('src','images/'+newPhone+png);
+            picPhone.setAttribute('src','images/'+telephone.company+png);
 
             liCompany.innerHTML="<b>Company</b>: "+telephone.company;
             liModel.innerHTML="<b>Model</b>: "+telephone.model;
@@ -83,7 +87,7 @@ function searchPhone() {
             liAvailable.innerHTML="<b>available</b>: "+inventory;
             liColor.innerHTML="<b>Color</b>: "+telephone.color;
         } else {
-            document.getElementById('sorry').innerHTML="Sorry, this product is not available!";
+           sorry.innerHTML="Sorry, this product is not available!";
             
         }
         
