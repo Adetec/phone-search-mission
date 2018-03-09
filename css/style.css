@@ -191,6 +191,10 @@ h1 span, #sorry{
 
 
 @media(max-width:400px){
+    h1{
+        font-size: 100%;
+        
+    }
     #result{
         flex-flow: column;
     }
@@ -247,7 +251,7 @@ h1 span, #sorry{
     
     
 }
-@media(max-width:850px){
+@media(min-width:768px){
     h1{
         font-size: 135%;
         
