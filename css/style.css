@@ -190,7 +190,7 @@ h1 span, #sorry{
 
 
 
-@media(max-width:927px){
+@media(max-width:400px){
     #result{
         flex-flow: column;
     }
@@ -249,8 +249,61 @@ h1 span, #sorry{
 }
 @media(max-width:850px){
     h1{
-        font-size: 100%;
+        font-size: 135%;
         
+    }
+    #result{
+        flex-flow: column;
+    }
+    #img{
+        display: flex;
+    }
+    #result div{
+        width: 100%;
+        border: 1px dashed black;
+    }
+
+    #result div:nth-child(1){
+        border-right: 1px dashed black;
+    }
+    
+    #result div:nth-child(2){
+        border-left: 1px dashed black;
+    }
+    #result button{
+        float: right;
+    }
+    #price{
+       height: 219px;
+       margin-right: 10%;
+       width: 130px;
+    }
+    #sect-search{
+        width: 100%;
+    }
+    input[type=search]{
+        width: 80%;
+        margin-left: -9%;
+        height: 40%;
+        font-size:16px;    
+    }
+    #header{
+        margin: 0;
+        width: 100%;
+    }
+    #srch-btn{
+        height: 52px;
+        font-size: 24px;
+        margin-left: 1px;
+    }
+    #lst{
+        font-size: 16px;
+    }
+    #result ul{
+        line-height: 43px;
+        font-size: 20px;
+        margin-left: 40%;
+        height: 275px;
     }
 }
 
