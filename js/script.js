@@ -1,3 +1,4 @@
+//create variables
 var srchInput = document.getElementById('input');
 var srchBtn = document.getElementById('srch-btn');
 var tmp = document.getElementById('tmp');
@@ -17,7 +18,7 @@ var isFound =false;
 
 
 
-
+//create array of objects
 var phones = [
         {company:'SAMSUNG',
         model: 'Galaxy S6 edge',
@@ -57,6 +58,7 @@ var phones = [
 
 companies();
 
+//declare companies function to output phones lst element
 function companies(){
     
     var lst =[];
@@ -69,7 +71,7 @@ function companies(){
 
 
 
-
+//create search function
 function searchPhone() {
     result.style.display="none";
     sorry.innerHTML="Sorry, there is no such product!";
